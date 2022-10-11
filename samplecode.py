@@ -1,3 +1,5 @@
+#######First Program#######
+
 my_list=[1,2,2,4,4,5,6,8,10,13,22,35,52,83]
 new_list=[]
 user_input=int(input("Enter number:"))
@@ -18,7 +20,7 @@ Enter number:14
 
 
 
-#second code
+##########second code##########
 
 employee={"name": "Tim", "age": 30, "birthday": "1990-03-10", "job": "Devops Engineer"}
 del employee["age"]
@@ -36,7 +38,7 @@ birthday : 1990-03-10
 job : software engineer
     
     
-    ##Third code
+ ##########Third code###########
  
 employees = [{
   "name": "Tina",
@@ -59,16 +61,13 @@ employees = [{
   }
 }]
 for i in employees:
-  print("name:",i['name'])
-  print("job:", i['job'])
-  print("city:", i['address']['city'])
+    print(i['name'] , i['job'] , i['address']['city'] )
+
 print(employees[1]['address']['country'])
 
+
+
 output:
-    name: Tina
-job: DevOps Engineer
-city: New York
-name: Tim
-job: Developer
-city: Sydney
-Australia
+ Tina DevOps Engineer New York
+ Tim Developer Sydney
+ Australia
