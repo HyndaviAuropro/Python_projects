@@ -34,3 +34,41 @@ for item in employee:
 name : Tim
 birthday : 1990-03-10
 job : software engineer
+    
+    
+    ##Third code
+ 
+employees = [{
+  "name": "Tina",
+  "age": 30,
+  "birthday": "1990-03-10",
+  "job": "DevOps Engineer",
+  "address": {
+    "city": "New York",
+    "country": "USA"
+  }
+},
+{
+  "name": "Tim",
+  "age": 35,
+  "birthday": "1985-02-21",
+  "job": "Developer",
+  "address": {
+    "city": "Sydney",
+    "country": "Australia"
+  }
+}]
+for i in employees:
+  print("name:",i['name'])
+  print("job:", i['job'])
+  print("city:", i['address']['city'])
+print(employees[1]['address']['country'])
+
+output:
+    name: Tina
+job: DevOps Engineer
+city: New York
+name: Tim
+job: Developer
+city: Sydney
+Australia
