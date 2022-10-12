@@ -71,3 +71,55 @@ output:
  Tina DevOps Engineer New York
  Tim Developer Sydney
  Australia
+
+
+
+##############Fifth code##############(Simple calculator)
+
+operation = input('''
+Please type  the operation:
++ for addition
+- for subtraction
+* for multiplication
+/ for division
+''')
+
+number_1 = int(input('Enter your first number: '))
+number_2 = int(input('Enter your second number: '))
+while True:
+
+  if operation == '+':
+     print('{} + {} = '.format(number_1, number_2))
+     print(number_1 + number_2)
+
+  elif operation == '-':
+     print('{} - {} = '.format(number_1, number_2))
+     print(number_1 - number_2)
+
+  elif operation == '*':
+     print('{} * {} = '.format(number_1, number_2))
+     print(number_1 * number_2)
+
+  elif operation == '/':
+     print('{} / {} = '.format(number_1, number_2))
+     print(number_1 / number_2)
+
+  calculation = input("Do you want to continue?(continue/exit):")
+  if calculation == "exit":
+      break
+    
+  
+
+output:
+    
+    Please type  the operation:
++ for addition
+- for subtraction
+* for multiplication
+/ for division
+*
+Enter your first number: 1
+Enter your second number: 3
+1 * 3 = 
+3
+Do you want to continue?(continue/exit):exit
