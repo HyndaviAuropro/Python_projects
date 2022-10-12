@@ -78,53 +78,43 @@ output:
 
 
 try:
+    count = 0
     while True:
-        num1 = input('Enter First Number: ')
+        a = input('Enter First Number: ')
 
-        if num1 == 'exit':
+        if a == 'exit':
             break
 
-        num1 = int(num1)
-        num2 = int(input('Enter second Numebr: '))
+        a = int(a)
+        b = int(input('Enter second Numebr: '))
 
-        num3 = input('Enter operation: +,-,*,/ ')
-
-        if num3 == '+':
-            print(num1 + num2)
-        elif num3 == '-':
-            print(num1-num2)
-        elif num3 == '*':
-            print(num1*num2)
-        elif num3 == '/':
-            print(num1 // num2)
-
+        c = input('Enter operation: +,-,*,/ ')
+        count += 1
+        if c == '+':
+            print(a + b)
+        elif c == '-':
+            print(a - b)
+        elif c == '*':
+            print(a * b)
+        elif c == '/':
+            print(a // b)
+    print('calculations: ', count)
 except:
     print('Division with zero is not possible or Strings NOT allowed')
-        
 
 
 output:
     
-    Enter First Number: 11
-Enter second Numebr: 22
-Enter operation: +,-,*,/ +
-33
-Enter First Number: 1
+ Enter First Number: 2
 Enter second Numebr: 3
 Enter operation: +,-,*,/ *
-3
+6
 Enter First Number: 5
-Enter second Numebr: 4
-Enter operation: +,-,*,/ /
-1
-Enter First Number: 1
-Enter second Numebr: 2
-Enter operation: +,-,*,/ /
-0
-Enter First Number: 5
-Enter second Numebr: 0
-Enter operation: +,-,*,/ /
-Division with zero is not possible or Strings NOT allowed
+Enter second Numebr: 3
+Enter operation: +,-,*,/ -
+2
+Enter First Number: exit
+calculations:  2
 
   --------------------------------------------------------------------------------------------------------------------------
             
