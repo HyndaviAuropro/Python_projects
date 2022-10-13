@@ -136,6 +136,17 @@ even_numbers() # calling "even_numbers" function
 
 
 
+
+
+import mymodule.py # importing mymodule.py 
+
+#Accessing youngest employee function
+fun(employees) 
+#printing number of lowercase and uppercase letters
+myfunc()
+#printing even numbers
+even_numbers()
+
 output:
     
 
