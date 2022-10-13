@@ -173,8 +173,8 @@ def calculation(): #defining a calculator function
             if c == 'exit':
                 break
             try:
-                 a = int(input('Enter First Number: '))
-                 b = int(input('Enter second Numebr: '))
+                 a = float(input('Enter First Number: '))
+                 b = float(input('Enter second Numebr: '))
 
                  count += 1
                  if c == '+':
@@ -197,17 +197,25 @@ calculation()
 
 output:
     
-Enter operation: +,-,*,/,"exit" /
-Enter First Number: 5
-Enter second Numebr: 0
-Division with zero is not possible.
-calculations:1
-Enter operation: +,-,*,/,"exit" s
-calculations:1
 Enter operation: +,-,*,/,"exit" +
-Enter First Number: a
+Enter First Number: 1.2
+Enter second Numebr: 2.4
+3.5999999999999996
+calculations:1
+Enter operation: +,-,*,/,"exit" a
+calculations:1
+Enter operation: +,-,*,/,"exit" *
+Enter First Number: 2
+Enter second Numebr: a
 Strings NOT allowed
 calculations:1
+Enter operation: +,-,*,/,"exit" 5
+calculations:1
+Enter operation: +,-,*,/,"exit" /
+Enter First Number: 4
+Enter second Numebr: 0
+Division with zero is not possible.
+calculations:2
 Enter operation: +,-,*,/,"exit" exit
   --------------------------------------------------------------------------------------------------------------------------
 
