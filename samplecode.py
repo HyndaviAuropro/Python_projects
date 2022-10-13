@@ -124,25 +124,34 @@ Enter operation: +,-,*,/,"exit" exit
   --------------------------------------------------------------------------------------------------------------------------
 
 ###################Sixth program(Guessing Game)##################
-
 import random
-target_num, guess_num = random.randint(1, 10), 0
-while target_num != guess_num:
-    guess_num = int(input('Guess a number between : '))
-    if guess_num<target_num:
-        print("guessed number is too low.")
-    elif guess_num>target_num:
-        print("guessed number is too high.")
-print('YOU WON!')
+def func():
+
+   target_num=random.randint(1,10) #Here target number is range is from 1 to 9 
+   guess_num=0 #guess number is initialized to zero
+   while target_num!=guess_num:
+       try:
+           guess_num = int(input("Guess a number:"))
+           if guess_num==target_num: #if guessed number is equal to target number the print 'YOU WON'
+                print("YOU WON!")
+           elif guess_num>target_num: #if guessed number is greater than target number then print guessed number is too high
+                print("too high")
+           elif guess_num<target_num: #if guessed number is less than target number then print guessed number is too low
+                print("too low")
+       except:
+           print("alphabets not allowed")
+func()
+
+
 
 output:
 
-Guess a number between : 5
-guessed number is too high.
-Guess a number between : 4
-guessed number is too high.
-Guess a number between : 3
-guessed number is too high.
-Guess a number between : 2
+Guess a number:1
+too low
+Guess a number:d
+alphabets not allowed
+Guess a number:5
+too high
+Guess a number:4
 YOU WON!
-            
+
