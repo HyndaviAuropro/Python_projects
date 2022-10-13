@@ -1,13 +1,13 @@
 #######First Program#######
 
 my_list=[1,2,2,4,4,5,6,8,10,13,22,35,52,83]
-new_list=[]
-user_input=int(input("Enter number:"))
+new_list=[] #Taking a new list
+user_input=int(input("Enter number:")) #Taking input from user
 for item in my_list:
     if item>=user_input and user_input>=10:
         print(item)
-        new_list.append(item)
-print(new_list)
+        new_list.append(item) # Appending the item to the new_list
+print(new_list) #printing the items in the new_list
 
 
 output:
@@ -23,12 +23,12 @@ Enter number:14
 ##########second code##########
 
 employee={"name": "Tim", "age": 30, "birthday": "1990-03-10", "job": "Devops Engineer"}
-del employee["age"]
-new_dict={"job":"software engineer"}
-employee.update(new_dict)
-print(employee)
+del employee["age"] #deleting the age key from the employee list
+new_dict={"job":"software engineer"} # Taking a new_dict with "job" key with value as "software engineer"
+employee.update(new_dict) # updating the new_dict in employee list
+print(employee) #printing the employee list
 for item in employee:
-    print(item, ':' ,employee[item])
+    print(item, ':' ,employee[item]) #printing all the items in employee list with key value pairs
 
 
  output:
@@ -60,10 +60,10 @@ employees = [{
     "country": "Australia"
   }
 }]
-for i in employees:
+for i in employees: #printing name,job and city of employees in employees list
     print(i['name'] , i['job'] , i['address']['city'] )
 
-print(employees[1]['address']['country'])
+print(employees[1]['address']['country'])  #printing the city of the second employee in employees list without looping
 
 
 
@@ -77,8 +77,8 @@ output:
 ##############Fifth code##############(Simple calculator)
 
 
-def calculation():
-    count = 0
+def calculation(): #defining a calculator function
+    count = 0 # Initializing count to 0
     while True:
         c = input('Enter operation: +,-,*,/,"exit" ')
         if c in ('+','-','*','/','exit') :
