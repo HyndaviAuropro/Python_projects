@@ -45,7 +45,7 @@ def myfunc():  #printing the no of upper case and lower case letters
     print('No of lowercase letters: ', lower)
 myfunc()
 
-def even_numbers():
+def even_numbers(): #printing even numbers
     num=[1,2,4,5,6,2,5,7,4]
     for i in num:
         if i % 2 == 0:
