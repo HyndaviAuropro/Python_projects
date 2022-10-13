@@ -77,48 +77,50 @@ output:
 ##############Fifth code##############(Simple calculator)
 
 
-count = 0
-while True:
-    a = input('Enter First Number: ')
-    try:
-      if a == 'exit':
-         break
-      a = int(a)
-      b = int(input('Enter second Numebr: '))
+def calculation():
+    count = 0
+    while True:
+        c = input('Enter operation: +,-,*,/,"exit" ')
+        if c in ('+','-','*','/','exit') :
+            if c == 'exit':
+                break
+            try:
+                 a = int(input('Enter First Number: '))
+                 b = int(input('Enter second Numebr: '))
 
-      c = input('Enter operation: +,-,*,/ ')
-      count += 1
-      if c == '+':
-         print(a + b)
-      elif c == '-':
-         print(a - b)
-      elif c == '*':
-         print(a * b)
-      elif c == '/':
-         print(a // b)
+                 count += 1
+                 if c == '+':
+                    print(a + b)
+                 elif c == '-':
+                    print(a - b)
+                 elif c == '*':
+                    print(a * b)
+                 elif c == '/':
+                     if b == 0 :
+                         print("Division with zero is not possible.")
+                     else:
 
-    except:
-      print('Division with zero is not possible or Strings NOT allowed')
-    print("calculations:" +str(count))
+                         print(a // b)
+
+            except:
+                print('Strings NOT allowed')
+        print("calculations:" +str(count))
+calculation()
 
 output:
     
-
-   Enter First Number: 2
-Enter second Numebr: 3
-Enter operation: +,-,*,/ +
-5
-calculations:1
-Enter First Number: 2
-Enter second Numebr: a
-Division with zero is not possible or Strings NOT allowed
-calculations:1
-Enter First Number: 4
+Enter operation: +,-,*,/,"exit" /
+Enter First Number: 5
 Enter second Numebr: 0
-Enter operation: +,-,*,/ /
-Division with zero is not possible or Strings NOT allowed
-calculations:2
-Enter First Number: exit
+Division with zero is not possible.
+calculations:1
+Enter operation: +,-,*,/,"exit" s
+calculations:1
+Enter operation: +,-,*,/,"exit" +
+Enter First Number: a
+Strings NOT allowed
+calculations:1
+Enter operation: +,-,*,/,"exit" exit
   --------------------------------------------------------------------------------------------------------------------------
 
 ###################Sixth program(Guessing Game)##################
