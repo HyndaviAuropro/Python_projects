@@ -77,45 +77,48 @@ output:
 ##############Fifth code##############(Simple calculator)
 
 
-try:
-    count = 0
-    while True:
-        a = input('Enter First Number: ')
+count = 0
+while True:
+    a = input('Enter First Number: ')
+    try:
+      if a == 'exit':
+         break
+      a = int(a)
+      b = int(input('Enter second Numebr: '))
 
-        if a == 'exit':
-            break
+      c = input('Enter operation: +,-,*,/ ')
+      count += 1
+      if c == '+':
+         print(a + b)
+      elif c == '-':
+         print(a - b)
+      elif c == '*':
+         print(a * b)
+      elif c == '/':
+         print(a // b)
 
-        a = int(a)
-        b = int(input('Enter second Numebr: '))
-
-        c = input('Enter operation: +,-,*,/ ')
-        count += 1
-        if c == '+':
-            print(a + b)
-        elif c == '-':
-            print(a - b)
-        elif c == '*':
-            print(a * b)
-        elif c == '/':
-            print(a // b)
-    print('calculations: ', count)
-except:
-    print('Division with zero is not possible or Strings NOT allowed')
-
+    except:
+      print('Division with zero is not possible or Strings NOT allowed')
+    print("calculations:" +str(count))
 
 output:
     
- Enter First Number: 2
-Enter second Numebr: 3
-Enter operation: +,-,*,/ *
-6
-Enter First Number: 5
-Enter second Numebr: 3
-Enter operation: +,-,*,/ -
-2
-Enter First Number: exit
-calculations:  2
 
+   Enter First Number: 2
+Enter second Numebr: 3
+Enter operation: +,-,*,/ +
+5
+calculations:1
+Enter First Number: 2
+Enter second Numebr: a
+Division with zero is not possible or Strings NOT allowed
+calculations:1
+Enter First Number: 4
+Enter second Numebr: 0
+Enter operation: +,-,*,/ /
+Division with zero is not possible or Strings NOT allowed
+calculations:2
+Enter First Number: exit
   --------------------------------------------------------------------------------------------------------------------------
 
 ###################Sixth program(Guessing Game)##################
