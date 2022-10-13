@@ -117,4 +117,27 @@ Enter First Number: exit
 calculations:  2
 
   --------------------------------------------------------------------------------------------------------------------------
+
+###################Sixth program(Guessing Game)##################
+
+import random
+target_num, guess_num = random.randint(1, 10), 0
+while target_num != guess_num:
+    guess_num = int(input('Guess a number between : '))
+    if guess_num<target_num:
+        print("guessed number is too low.")
+    elif guess_num>target_num:
+        print("guessed number is too high.")
+print('YOU WON!')
+
+output:
+
+Guess a number between : 5
+guessed number is too high.
+Guess a number between : 4
+guessed number is too high.
+Guess a number between : 3
+guessed number is too high.
+Guess a number between : 2
+YOU WON!
             
