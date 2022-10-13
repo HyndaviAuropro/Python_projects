@@ -127,7 +127,7 @@ Enter operation: +,-,*,/,"exit" exit
 import random
 def func():
 
-   target_num=random.randint(1,10) #Here target number is range is from 1 to 9 
+   target_num=random.randint(1,10) #Here target number  range is from 1 to 9 
    guess_num=0 #guess number is initialized to zero
    while target_num!=guess_num:
        try:
