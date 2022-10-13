@@ -148,7 +148,17 @@ myfunc()
 even_numbers()
 
 output:
-    
+
+name:  Tina  age:  30
+Enter string:DevOps
+No of uppercase letters:  2
+No of lowercase letters:  4
+2
+4
+6
+2
+4
+
 
 -----------------------------------------------------------------------------------------------------------------------------
 
