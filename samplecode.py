@@ -251,3 +251,139 @@ too high
 Guess a number:4
 YOU WON!
 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+#####################Program7(program using classes and inheritance concept)###################
+
+class Person:
+  def __init__(self, first_name, last_name, age):
+    self.first_name = first_name
+    self.last_name = last_name
+    self.age = age
+
+  def print_name(self):
+    print("Full Name: " + self.first_name, self.last_name)
+
+class Student(Person):
+  def __init__(self, first_name, last_name, age):
+    Person.__init__(self, first_name, last_name, age)
+    self.lectures=[]
+
+  def listing_of_lectures(self):
+     print("Listing all the lectures :")
+     for lect in self.lectures:
+        print(lect)
+  def adding_lectures(self,lect):
+        print("Adding new lecture:" +lect)
+        self.lectures.append(lect)
+  def removing_lectures(self,lect):
+        print("Removing lecture:" + lect)
+        self.lectures.remove(lect)
+    
+class Professor(Person):
+    def __init__(self, first_name, last_name, age):
+        Person.__init__(self, first_name, last_name, age)
+        self.subjects=[]
+    def listing_of_subjects(self):
+        print("Listing all the subjects:")
+        for sub in self.subjects:
+            print(sub)
+    def adding_subjects(self,sub):
+        print("Adding new subjects:" +sub)
+        self.subjects.append(sub)
+    def removing_subjects(self,sub):
+        print("Removing subjects:" +sub)
+        self.subjects.remove(sub)
+
+class Lectures:
+    def __init__(self, name, max_students, duration):
+        self.name=name
+        self.max_students=max_students
+        self.duration=duration
+        self.professor=[]
+    def listing_of_professors(self):
+        print("Listing all the professors:")
+        for p in self.professor:
+            print(p)
+    def lect_info(self):
+        print("Name of the lecture:" + self.name)
+        print("During of the lecture:" + str(self.duration))
+    def adding_professors(self,p):
+        print("Adding professor to the list of professsors:" +p)
+        self.professor.append(p)
+
+x=Student("Hyndavi", "Nanduri", 23)
+x.print_name()
+x.adding_lectures("DevOps")
+x.adding_lectures("Ansible")
+x.adding_lectures("Python")
+x.adding_lectures("Terraform")
+x.adding_lectures("kubernetes")
+x.adding_lectures("Docker")
+x.listing_of_lectures()
+x.removing_lectures("Python")
+x.listing_of_lectures()
+
+y=Professor("joe", "Alwyn", 33)
+y.print_name()
+y.adding_subjects("Maths")
+y.adding_subjects("Data Science")
+y.adding_subjects("AI")
+y.listing_of_subjects()
+y.removing_subjects("Maths")
+y.listing_of_subjects()
+
+z=Lectures("Anjali", 20, 45)
+z.lect_info()
+z.adding_professors("Nana")
+z.adding_professors("Naresh")
+z.adding_professors("Manoj")
+z.listing_of_professors()
+
+
+
+output:
+
+Full Name: Hyndavi Nanduri
+Adding new lecture:DevOps
+Adding new lecture:Ansible
+Adding new lecture:Python
+Adding new lecture:Terraform
+Adding new lecture:kubernetes
+Adding new lecture:Docker
+Listing all the lectures :
+DevOps
+Ansible
+Python
+Terraform
+kubernetes
+Docker
+Removing lecture:Python
+Listing all the lectures :
+DevOps
+Ansible
+Terraform
+kubernetes
+Docker
+Full Name: joe Alwyn
+Adding new subjects:Maths
+Adding new subjects:Data Science
+Adding new subjects:AI
+Listing all the subjects:
+Maths
+Data Science
+AI
+Removing subjects:Maths
+Listing all the subjects:
+Data Science
+AI
+Name of the lecture:Anjali
+During of the lecture:45
+Adding professor to the list of professsors:Nana
+Adding professor to the list of professsors:Naresh
+Adding professor to the list of professsors:Manoj
+Listing all the professors:
+Nana
+Naresh
+Manoj
+
