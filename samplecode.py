@@ -6,7 +6,7 @@ user_input=int(input("Enter number:")) #Taking input from user
 for item in my_list:
     if item>=10:
         print(item)  #printing the items one by one
-        new_list1.append(item)  # Appending the item to the new_list
+        new_list1.append(item)  # Appending the item to the new_list1
 print(new_list1) #printing the items in the new_list1
 for i in my_list:
     if i>=user_input:
