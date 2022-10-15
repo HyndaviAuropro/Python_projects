@@ -1,22 +1,29 @@
 #######First Program#######
-
 my_list=[1,2,2,4,4,5,6,8,10,13,22,35,52,83]
-new_list=[] #Taking a new list
+new_list1=[] #Taking a new list for printing all elements that are greater than or equal to 10
+new_list2=[] #Taking a new list that contains elements from my_list that are higher than the user_input
 user_input=int(input("Enter number:")) #Taking input from user
 for item in my_list:
-    if item>=user_input and user_input>=10:
-        print(item)
-        new_list.append(item) # Appending the item to the new_list
-print(new_list) #printing the items in the new_list
+    if item>=10:
+        print(item)  #printing the items one by one
+        new_list1.append(item)  # Appending the item to the new_list
+print(new_list1) #printing the items in the new_list1
+for i in my_list:
+    if i>=user_input:
+        new_list2.append(i)  # Instead of printing all elements one by one , appending the elements(i) to the new_list2
+print(new_list2) #printing the items in the new_list2
 
 
 output:
-Enter number:14
+Enter number:5
+10
+13
 22
 35
 52
 83
-[22, 35, 52, 83]
+[10, 13, 22, 35, 52, 83]
+[5, 6, 8, 10, 13, 22, 35, 52, 83]
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
