@@ -33,13 +33,11 @@ employee={"name": "Tim", "age": 30, "birthday": "1990-03-10", "job": "Devops Eng
 del employee["age"] #deleting the age key from the employee dictionary
 new_dict={"job":"software engineer"} # Taking a new_dict with "job" key with value as "software engineer"
 employee.update(new_dict) # updating the new_dict in employee dictionary
-print(employee) #printing the employee dictionary
 for item in employee:
     print(item, ':' ,employee[item]) #printing all the items in employee dictionary with key value pairs
 
-
  output:
-    {'name': 'Tim', 'birthday': '1990-03-10', 'job': 'software engineer'}
+   
 name : Tim
 birthday : 1990-03-10
 job : software engineer
