@@ -30,12 +30,12 @@ Enter number:5
 ##########second code##########
 
 employee={"name": "Tim", "age": 30, "birthday": "1990-03-10", "job": "Devops Engineer"}
-del employee["age"] #deleting the age key from the employee list
+del employee["age"] #deleting the age key from the employee dictionary
 new_dict={"job":"software engineer"} # Taking a new_dict with "job" key with value as "software engineer"
-employee.update(new_dict) # updating the new_dict in employee list
-print(employee) #printing the employee list
+employee.update(new_dict) # updating the new_dict in employee dictionary
+print(employee) #printing the employee dictionary
 for item in employee:
-    print(item, ':' ,employee[item]) #printing all the items in employee list with key value pairs
+    print(item, ':' ,employee[item]) #printing all the items in employee dictionary with key value pairs
 
 
  output:
