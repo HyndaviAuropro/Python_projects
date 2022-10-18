@@ -445,3 +445,25 @@ Hours : 5472
 minutes : 328320
 seconds : 19699200
 
+############Program 9(github api)####################################################################
+
+import requests
+from pprint import pprint
+username="HyndaviAuropro"
+url=f"https://api.github.com/users/{username}"
+projects=requests.get(url).json()
+print(projects)
+import base64
+from github import Github
+username="HyndaviAuropro"
+g=Github()
+user=g.get_user(username)
+for repo in user.get_repos():
+    print(repo)
+    
+ output:
+    
+ {'login': 'HyndaviAuropro', 'id': 115532956, 'node_id': 'U_kgDOBuLknA', 'avatar_url': 'https://avatars.githubusercontent.com/u/115532956?v=4', 'gravatar_id': '', 'url': 'https://api.github.com/users/HyndaviAuropro', 'html_url': 'https://github.com/HyndaviAuropro', 'followers_url': 'https://api.github.com/users/HyndaviAuropro/followers', 'following_url': 'https://api.github.com/users/HyndaviAuropro/following{/other_user}', 'gists_url': 'https://api.github.com/users/HyndaviAuropro/gists{/gist_id}', 'starred_url': 'https://api.github.com/users/HyndaviAuropro/starred{/owner}{/repo}', 'subscriptions_url': 'https://api.github.com/users/HyndaviAuropro/subscriptions', 'organizations_url': 'https://api.github.com/users/HyndaviAuropro/orgs', 'repos_url': 'https://api.github.com/users/HyndaviAuropro/repos', 'events_url': 'https://api.github.com/users/HyndaviAuropro/events{/privacy}', 'received_events_url': 'https://api.github.com/users/HyndaviAuropro/received_events', 'type': 'User', 'site_admin': False, 'name': None, 'company': None, 'blog': '', 'location': None, 'email': None, 'hireable': None, 'bio': None, 'twitter_username': None, 'public_repos': 2, 'public_gists': 0, 'followers': 0, 'following': 0, 'created_at': '2022-10-11T07:36:48Z', 'updated_at': '2022-10-11T07:36:48Z'}
+Repository(full_name="HyndaviAuropro/Python_projects")
+Repository(full_name="HyndaviAuropro/task1")
+ 
