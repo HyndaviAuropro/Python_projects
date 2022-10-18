@@ -392,3 +392,56 @@ Nana
 Naresh
 Manoj
 
+
+#########Program 8(printing how many days and time left for birthday)######################
+
+import datetime
+
+year = int(input('Enter your birth year: [YY] '))
+month = int(input('Enter your birth month: [MM] '))
+day = int(input('Enter your birth day?: [DD] '))
+birth = datetime.date(year,month,day)
+print("Birth", birth)
+
+today = datetime.date.today()
+print("Today", today)
+
+if ((today.month == birth.month and today.date >= birth.day) or (today.month > birth.month)) :
+    nextBirthdayYear = today.year + 1
+else:
+    nextBirthdayYear = today.year
+
+nextBirthday = datetime.date(nextBirthdayYear, birth.month, birth.day )
+print("Next Birthday: " , nextBirthday)
+diff = nextBirthday - today
+print("Days left for next birthday: ", diff.days)
+
+hours=int(diff.days)*24
+
+print(f'{"Hours : "}{hours}')
+
+mins=int(hours)*60
+
+sec=int(mins)*60
+
+print(f'{"minutes : "}{mins}')
+
+print(f'{"seconds : "}{sec}')
+
+
+
+
+output:
+    
+   
+Enter your birth year: [YY] 1999
+Enter your birth month: [MM] 06
+Enter your birth day: [DD] 03
+Birth 1999-06-03
+Today 2022-10-18
+Next Birthday:  2023-06-03
+Time and date left for your birthday:  228
+Hours : 5472
+minutes : 328320
+seconds : 19699200
+
