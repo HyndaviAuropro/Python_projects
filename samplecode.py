@@ -466,3 +466,31 @@ for repo in user.get_repos():
 Repository(full_name="HyndaviAuropro/Python_projects")
 Repository(full_name="HyndaviAuropro/task1")
  
+
+ ################program 10(spreadsheet)###############################################################
+
+import pandas as pd
+c=pd.read_excel("C:\\employees.xlsx")
+df=pd.DataFrame(c)
+print(df)
+print()
+print("After sorting a spread sheet:")
+print()
+print(df.sort_values("years_of_experience",ascending=False))
+
+
+output:
+    
+   name  years_of_experience           job_title date_of_birth
+0   Anjali                    5  Assosiate Engineer    1999-11-08
+1  Anuragh                    3     Project Manager    1992-09-16
+2   Charan                    6             Testing    1992-07-24
+
+After sorting a spread sheet:
+
+      name  years_of_experience           job_title date_of_birth
+2   Charan                    6             Testing    1992-07-24
+0   Anjali                    5  Assosiate Engineer    1999-11-08
+1  Anuragh                    3     Project Manager    1992-09-16
+  
+    
