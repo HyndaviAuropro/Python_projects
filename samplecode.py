@@ -406,7 +406,7 @@ print("Birth", birth)
 today = datetime.date.today()
 print("Today", today)
 
-if ((today.month == birth.month and today.date >= birth.day) or (today.month > birth.month)) :
+if ((today.month == birth.month and today.date >= birth.date) or (today.month > birth.month)) :
     nextBirthdayYear = today.year + 1
 else:
     nextBirthdayYear = today.year
